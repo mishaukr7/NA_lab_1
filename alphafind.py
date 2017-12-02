@@ -2,12 +2,13 @@ import math
 
 
 def alpha_1(counter):
-    return math.sin(counter)/counter
+    alpha = math.sin(counter)/counter
+    if abs(alpha) > 0.1:
+        alpha = alpha / 100
+    return alpha
 
 
-def alpha_2(counter):
-    return math.exp(-counter)*counter**2
+def alpha_2(iter, n):
+    return math.log(iter)/n
 
 
-#c = [abs(alpha_2(x)) for x in range(1, 10000)]
-#print(c)

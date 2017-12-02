@@ -9,7 +9,7 @@ while i <= 6:
         if ((i == 5) or (i == -5)) and (j == 0):
             i += 0.5
             j += 0.5
-        x, y = trajectory.get_trajectory(i, j, 1000, 1)
+        x, y = trajectory.get_trajectory(i, j, 10000, 2)
         plt.plot(x, y)
         j += 0.5
     i += 0.5
